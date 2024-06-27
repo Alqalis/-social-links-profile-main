@@ -1,0 +1,221 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    background-color: #191919;
+    height: 100vh;
+    width: 100vw;
+}
+.destop
+{
+    position: absolute;
+    top: 20px;
+    left: 40%;
+    opacity: .6;
+
+
+    font-size: 3rem;
+    z-index: 3;
+    color: aliceblue;
+    display: block;
+    text-transform: capitalize;
+}
+.mobile
+{
+    display: none;
+}  
+.box
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    width: 500px;
+    height: 850px;
+    border-radius: 1%;
+    background-color: #383535;
+    font-family: 'inter', sans-serif;
+}
+.box figure
+{
+    display: grid;
+    place-content: center;
+}
+.box figure img
+{
+    width: 50%;
+    height: auto;
+    border-radius: 50%;
+    margin: 2rem 0 2rem 6rem;
+}
+.box figure figcaption
+{
+    text-align: center;
+}
+.box figure figcaption h1
+{
+    color: white;
+    font-weight: 650;
+    font-size: 2.3rem;
+}
+.box figure figcaption p:nth-child(2)
+{
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-block: .7rem 2rem;
+    color: hsl(80, 77%, 55%);
+}
+.box figure figcaption p:nth-child(3)
+{
+    font-weight: 500;
+    font-size: 1.3rem;
+    margin-block: 1.3rem;
+    color: rgb(255, 255, 255)
+}
+.social_links
+{
+    display: grid;
+    line-height: 3;
+    place-items: center;
+}
+.social_links a
+{
+    width: 80%;
+    margin: .5rem;
+    color: white;
+    font-weight: 600;
+    font-size: 1.3rem;
+    border-radius: 7px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #191919;
+    transition: all .6s ease-in-out linear forwards;
+}
+.social_links a:hover, .social_links a:focus
+{
+    color: rgb(0, 0,0);
+    background-color: hsl(80, 77%, 55%);
+}
+.attribution 
+{
+    font-size: 17px;
+    text-align: center; 
+
+    position: absolute;
+    bottom: 20px;
+    left: 30%;
+    color: #fff; 
+    text-transform: capitalize; 
+}
+.attribution a {
+    color: white;
+    text-decoration: underline;
+}
+.attribution a:hover {
+    cursor: pointer;
+    text-decoration: none;
+    color: hsl(228, 45%, 44%);
+}
+/* ==================MOBILE VEIW =================================*/
+@media screen and (min-width: 300px) and (max-width: 768px){
+    .destop
+    {
+        display: none;
+    }  
+    .mobile
+    {
+        z-index: 3;
+        font-size: 2rem;
+        color: aliceblue;
+        text-transform: capitalize;
+
+        position: absolute;
+        top: 50px;
+        left: 30%;
+        opacity: .4;
+        display: block;
+    }
+    .box
+    {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 90%;
+        height: 700px;
+        border-radius: 1%;
+        background-color: #383535;
+    }
+    .box figure img
+    {
+        width: 40%;
+        height: auto;
+        border-radius: 50%;
+        margin: 2rem 0 2rem 6.5rem;
+    }
+    .box figure figcaption h1
+    {
+        color: white;
+        font-weight: 650;
+        font-size: clamp(16px, 3vh, 20px);
+    }
+    .box figure figcaption p:nth-child(2)
+    {
+        font-weight: 700;
+        margin-block: .6rem 2rem;
+        color: hsl(80, 77%, 55%);
+        font-size: clamp(16px, 3vh, 18px);
+    }
+    .box figure figcaption p:nth-child(3)
+    {
+        font-weight: 500;
+        margin-block: 1.3rem;
+        color: rgb(255, 255, 255);
+        font-size: clamp(16px, 3vh, 17px);
+    }
+    .social_links
+    {
+        display: grid;
+        line-height: 1;
+        place-items: center;
+    }
+    .social_links a
+    {
+        width: 95%;
+        padding: 1rem;
+        margin: .5rem;
+        color: white;
+        font-weight: 600;
+        border-radius: 7px;
+        text-align: center;
+        text-decoration: none;
+        background-color: #191919;
+        font-size: clamp(16px, 3vh, 18px);
+        transition: all .6s ease-in-out linear forwards;
+    }
+    .attribution 
+    {
+        font-size: 14px;
+        text-align: center; 
+
+        position: absolute;
+        bottom: 20px;
+        left: 2%;
+        color: #fff; 
+        text-transform: capitalize; 
+    }
+    .attribution a {
+        color: white;
+        text-decoration: underline;
+    }
+    .attribution a:hover {
+        cursor: pointer;
+        text-decoration: none;
+        color: hsl(228, 45%, 44%);
+    }
+}
